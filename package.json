@@ -1,0 +1,22 @@
+{
+  "name": "webux-static",
+  "version": "1.0.0",
+  "description": "a module to serve static files from express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiowebux/webux-static.git"
+  },
+  "author": "Studio Webux S.E.N.C",
+  "license": "SEE LICENSE IN license.txt",
+  "bugs": {
+    "url": "https://github.com/studiowebux/webux-static/issues"
+  },
+  "homepage": "https://github.com/studiowebux/webux-static#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
