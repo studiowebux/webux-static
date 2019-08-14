@@ -7,6 +7,8 @@
 
 "use strict";
 
+const path = require("path");
+
 /**
  * Load static resources
  * @param {Object} options The configuration to start the server, mandatory
@@ -39,6 +41,9 @@ const serveStatic = (options, app, express, log = console) => {
 
       options.resources.forEach(resource => {
         log.info("Link " + resource.path + " to " + resource.resource);
+        if (!path.isAbsolute(resource.resource)) {
+          return reject(new Error("The resource path must be absolute"));
+        }
         app.use(resource.path, express.static(resource.resource));
       });
 
