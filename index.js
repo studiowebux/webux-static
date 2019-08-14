@@ -38,7 +38,7 @@ const serveStatic = (options, app, express, log = console) => {
       }
 
       options.resources.forEach(resource => {
-        log.info("Link ", resource.path, " to ", resource.resource);
+        log.info("Link " + resource.path + " to " + resource.resource);
         app.use(resource.path, express.static(resource.resource));
       });
 
