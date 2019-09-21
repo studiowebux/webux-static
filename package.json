@@ -1,6 +1,6 @@
 {
   "name": "webux-static",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a module to serve static files from express",
   "main": "index.js",
   "scripts": {
