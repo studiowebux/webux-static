@@ -20,27 +20,12 @@ const path = require("path");
 const serveStatic = (options, app, express, log = console) => {
   return new Promise((resolve, reject) => {
     try {
-      if (!options || typeof options !== "object") {
-        return reject(
-          new Error("The options parameter is required and must be an object")
-        );
-      }
-      if (!app || typeof app !== "function") {
-        return reject(
-          new Error("The app parameter is required and must be a function")
-        );
-      }
-      if (!express || typeof express !== "function") {
-        return reject(
-          new Error("The express parameter is required and must be a function")
-        );
-      }
-      if (log && typeof log !== "object") {
-        return reject(new Error("The log parameter must be an object"));
-      }
-
       options.resources.forEach(resource => {
-        log.info("Link " + resource.path + " to " + resource.resource);
+        log.info(
+          "\x1b[33m",
+          "webux-static - Link " + resource.path + " to " + resource.resource,
+          "\x1b[0m"
+        );
         if (!path.isAbsolute(resource.resource)) {
           return reject(new Error("The resource path must be absolute"));
         }
