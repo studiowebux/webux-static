@@ -22,9 +22,7 @@ const serveStatic = (options, app, express, log = console) => {
     try {
       options.resources.forEach(resource => {
         log.info(
-          "\x1b[33m",
-          "webux-static - Link " + resource.path + " to " + resource.resource,
-          "\x1b[0m"
+          `\x1b[33mwebux-static - Link ${resource.path} to ${resource.resource}\x1b[0m`
         );
         if (!path.isAbsolute(resource.resource)) {
           return reject(new Error("The resource path must be absolute"));
