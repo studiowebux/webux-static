@@ -1,5 +1,5 @@
 {
-  "name": "webux-static",
+  "name": "@studiowebux/static",
   "version": "1.0.4",
   "description": "a module to serve static files from express",
   "main": "index.js",

@@ -5,7 +5,7 @@ This module uses express to serve static files
 ## Installation
 
 ```bash
-npm i --save webux-static
+npm i --save @studiowebux/static
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ module.exports = {
 ```
 const express = require("express");
 const app = express();
-const { serveStatic } = require("webux-static");
+const { serveStatic } = require("@studiowebux/static");
 
 app.get("/api/v1/resource", (req, res) => {
   res.status(200).json({ msg: "API CALL !" });
